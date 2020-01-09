@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+table,th,td{border:2px solid black;border-collapse:collapse;text-align:center;background-color:white}
+th,td{padding:5px 10px}
+</style>
+</head>
+<body class="bii">
+<div class="navbarm">
+    <ul>
+		<li><a href="{% url 'stdetails' %}">My profile</a></li>
+		<li><a href="{% url 'stuviewatt' %}">Attendence sheet students</a></li>
+		<li><a href="{% url 'stuviewmark' %}">Mark sheet students</a></li>
+		<li><a href="{% url 'stuleave' %}"> Leave Application</a></li>
+		<li><a href="{% url 'fleavestatus'%}">Leave status</a></li>
+		<li>
+	<form action="{% url 'logout1'%}" method="POST">
+	{% csrf_token %}
+			<input type="submit" value="Logout" name="logout1" class="but1" > </form></li>
+    </ul>
+</div>
+</body>
+</html>	

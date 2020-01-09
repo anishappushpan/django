@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bi">
+	<form class="cott" action="{% url 'adm' %}" method="POST">
+	{% csrf_token %}
+	<h3 class="r">ADMIN LOGIN</h3>
+	<input type="text" placeholder="admin name" name="name" class="frm">
+	<input type="password" placeholder="password" name="password" class="frm">
+	<input type="submit" name="adm" class="but">
+	</form>
+</body>
+</html>	
+	

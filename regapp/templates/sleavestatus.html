@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+table,th,td{border:2px solid black;border-collapse:collapse;text-align:center;background-color:white}
+th,td{padding:5px 10px}
+</style>
+</head>
+<body class="bii">
+<div style="display:inline-flex">
+<div class="navbarm">
+    <ul>
+		<li><a href="{% url 'stdetails' %}">My profile</a></li>
+		<li><a href="{% url 'stuviewatt' %}">Attendence sheet students</a></li>
+		<li><a href="{% url 'stuviewmark' %}">Mark sheet students</a></li>
+		<li><a href="{% url 'stuleave' %}"> Leave Application</a></li>
+		<li><a href="{% url 'fleavestatus'%}">Leave status</a></li>
+		
+    </ul>
+</div>
+
+<div class="tables2">
+ <h1 class="hd">Leave status</h1>
+<table>
+    <thead>
+       <tr>
+        <th>NAME</th>
+        <th>Fromdate</th>
+        <th>Todate</th>
+        <th>reason</th>
+        <th>status</th>
+        </tr></thead>
+    <tbody>
+ {% if authors %}
+ {% for i in authors%}
+ <tr>
+    <td>{{ i.name}}</td>
+    <td>{{ i.fromdate}}</td>
+    <td>{{ i.todate}}</td>
+    <td>{{ i.reason}}</td>
+    <td>{{ i.status}}</td>
+ </tr>
+ {%endfor%}
+ {%endif%}
+ </tbody>
+</table>
+</div>
+</div>
+</body>
+</html>	

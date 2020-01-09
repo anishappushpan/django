@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+table,th,td{border:2px solid black;border-collapse:collapse;text-align:center;background-color:white}
+th,td{padding:5px 10px}
+</style>
+</head>
+<body class="bii">
+<div style="display:inline-flex">
+<div class="navbarm">
+    <ul>
+		<li><a href="{% url 'stdetails' %}">My profile</a></li>
+		<li><a href="{% url 'stuviewatt' %}">Student attendance Sheet</a></li>
+		<li><a href="{% url 'leave' %}">Leave Application</a></li>
+    </ul>
+</div>
+<div class="tables">
+<h1 class="hd">MY Profile</h1>
+<table>
+    <thead>
+       <tr>
+        <th>NAME</th>
+        <th>Student id</th>
+        <th>Year</th>
+        <th>Address</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Branch</th>
+        </tr></thead>
+    <tbody>
+	{% if authors%}
+	{% for i in authors%}
+
+
+ <tr>
+    <td>{{ i.name}}</td>
+    <td>{{ i.stdid}}</td>
+    <td>{{ i.year}}</td>
+    <td>{{ i.address}}</td>
+    <td>{{ i.mobile}}</td>
+    <td>{{ i.email}}</td>
+    <td>{{ i.password}}</td>
+    <td>{{ i.branch}}</td>
+ </tr>
+ </tbody>
+ {%endfor %}
+ {%endif %}
+</table>
+</div>
+</div>
+</body>
+</html>	

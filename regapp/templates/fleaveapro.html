@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+table,th,td{border:2px solid black;border-collapse:collapse;text-align:center;background-color:white}
+th,td{padding:5px 10px}
+</style>
+</head>
+<body class="bii">
+
+
+<div style="display:inline-flex">
+
+<div class="navbarm">
+    <ul>
+        <li><a href="{% url 'faculty' %}">Add Faculty</a>
+			<div class="submenu">
+				<ul>
+					<li><a href="{% url 'sign' %}">Add student</a></li>
+				</ul>	
+			</div>
+		</li>
+		<li><a href="">Student details</a>
+			<div class="submenu">
+				<ul>
+					<li><a href="{% url 'spersonal'%}">Personal details</a></li>
+					<li><a href="{% url 'sattendance'%}">Attendance</a></li>	
+				</ul>
+			</div>
+		</li>
+		<li><a href="{% url 'fdetails' %}">Faculty details</a>
+		<div class="submenu">
+				<ul>
+					<li><a href="{% url 'fdetails'%}">Personal details</a></li>
+					<li><a href="{% url 'fattendance'%}">Attendance</a></li>
+					<li><a href="{% url 'mark'%}">mark</a></li>	
+				</ul>
+			</div>
+		
+		</li>
+		<li><a href="{% url 'leave' %}">Leave management</a>
+        
+			<div class="submenu">
+				<ul>
+					<li><a href="{% url 'fleaveapro' %}">Faculty</a></li>
+					<li><a href="{% url 'sleaveapro' %}">Student</a></li>
+				</ul>	
+			</div>
+        </li>
+	<li>
+	<form action="{% url 'logout1'%}" method="POST">
+	{% csrf_token %}
+			<input type="submit" value="Logout" name="logout1" class="but1" > </form></li>
+	        
+    </ul>
+</div>
+<div class="tables2">
+ <h1 class="hd">Leave Application</h1>
+<table>
+    <thead>
+       <tr>
+        <th>NAME</th>
+        <th>From date</th>
+        <th>To date</th>
+        <th>Reason</th>
+        <th>Status</th>
+        </tr></thead>
+    <tbody>
+ {% if authors %}
+ {% for i in authors%}
+ <tr>
+    <td>{{ i.name}}</td>
+    <td>{{ i.fromdate}}</td>
+    <td>{{ i.todate}}</td>
+    <td>{{ i.reason}}</td>
+    <td>{{ i.status}}</td>
+ </tr>
+ {%endfor%}
+ {%endif%}
+ </tbody>
+</table>
+</div>
+
+	<div>
+		<form action="{% url 'faculty1' %}" method="POST">
+		{% csrf_token %}
+		<input type="text" name="name" placeholder="enter the name"class="frm1" >
+		<input type="submit" name="submit"class="frm1" value="approve" >
+		</form>
+	</div>
+</div>
+</body>
+</html>	

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bi">
+	
+	<form class="cot" action="{% url 'facleav' %}" method="POST">
+	{% csrf_token %}
+	<h3 class="r">Leave Application</h3>
+	<input type="text" placeholder="name" name="name" class="frm">
+	<input type="text" placeholder="faculty id" name="stdid" class="frm">
+	<input type="date"  name="fromdate" class="frm">
+	<input type="date"  name="todate" class="frm">
+	<textarea placeholder="reason" name="reason" class="frm"></textarea>
+    <select name="status" class="frm">
+    <option>Applied</option>
+   </select>
+   
+	<input type="submit" value="apply" name="attendance" class="but">
+	</form>
+</body>
+</html>	

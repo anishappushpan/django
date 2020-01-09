@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+table,th,td{border:2px solid black;border-collapse:collapse;text-align:center;background-color:white}
+th,td{padding:5px 10px}
+</style>
+</head>
+<body class="bii">
+
+<div class="navbarm">
+    <ul>
+        <li><a href="{% url 'faculty' %}">Add Faculty</a>
+			<div class="submenu">
+				<ul>
+					<li><a href="{% url 'sign' %}">Add student</a></li>
+				</ul>	
+			</div>
+		</li>
+		<li><a href="{% url 'stdetails' %}">Student details</a>
+			<div class="submenu">
+				<ul>
+					<li><a href="{% url 'spersonal'%}">Personal details</a></li>
+					<li><a href="{% url 'sattendance'%}">Attendance</a></li>	
+				</ul>
+			</div>
+		</li>
+		<li><a href="{% url 'fdetails' %}">Faculty details</a>
+		<div class="submenu">
+				<ul>
+					<li><a href="{% url 'fdetails'%}">Personal details</a></li>
+					<li><a href="{% url 'fattendance'%}">Attendance</a></li>
+					<li><a href="{% url 'mark'%}">mark</a></li>	
+				</ul>
+			</div>
+		
+		</li>
+		<li><a href="{% url 'leave' %}">Leave management</a></li>
+
+	        
+    </ul>
+</div>
+<div class="tables1">
+ <h1 class="hd">Student marksheet</h1>
+<table>
+    <thead>
+       <tr>
+        <th>NAME</th>
+        <th>Student id</th>
+        <th>Subject1</th>
+        <th>Subject2</th>
+        <th>subject3</th>
+        </tr></thead>
+    <tbody>
+ {% if authors %}
+ {% for i in authors%}
+ <tr>
+    <td>{{ i.name}}</td>
+    <td>{{ i.stdid}}</td>
+    <td>{{ i.mark1}}</td>
+    <td>{{ i.mark2}}</td>
+    <td>{{ i.mark3}}</td>
+ </tr>
+ {%endfor%}
+ {%endif%}
+ </tbody>
+</table>
+</div>
+</div>
+</body>
+</html>	
+	

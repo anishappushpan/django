@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+table,th,td{border:2px solid black;border-collapse:collapse;text-align:center;background-color:white}
+th,td{padding:5px 10px}
+</style>
+</head>
+<body class="bii">
+<div class="navbarm">
+    <ul>
+		<li><a href="{% url 'f1details' %}">My profile</a></li>
+        <li><a href="{% url 'sign' %}">Add student</a></li>
+		<li><a href="{% url 'sattendance' %}">Student Attendance</a></li>
+        <li><a href="{% url 'mark'%}">mark</a></li>	
+        	<li>
+	            <form action="{% url 'logout1'%}" method="POST">
+	            {% csrf_token %}
+			    <input type="submit" value="Logout" name="logout1" class="but1" > </form></li>
+    </ul>
+</div>
+<div class="tables1">
+ <h1 class="hd">Faculty details</h1>
+ <form action="{% url 'logo' %}" method="POST">
+{% csrf_token %}
+<table>
+    <thead>
+       <tr>
+        <th>NAME</th>
+        <th>Faculty id</th>
+        <th>Address</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Password</th>
+        </tr></thead>
+    <tbody>
+    
+ {% if authors %}
+ {% for i in authors%}
+ <tr>
+    <td>{{ i.name}}</td>
+    <td>{{ i.fid}}</td>
+    <td>{{ i.address}}</td>
+    <td>{{ i.mobile}}</td>
+    <td>{{ i.email}}</td>
+    <td>{{ i.password}}</td>
+ </tr>
+ {%endfor%}
+ {%endif%}
+ </tbody>
+</table>
+
+<input type="submit" value="Edit" name="logo">
+</form>
+</div>
+</body>
+</html>	

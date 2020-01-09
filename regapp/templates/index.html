@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>
+Home
+</title>
+{% load static %} 
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body class="bi">
+<div class="navbar">
+    <ul>
+        <li><a href="{% url 'adminz' %}">Admin</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">About us</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        
+    </ul>
+</div>
+
+<div class="cottt">
+<h2>Student Information System</h2>
+    <div>
+        <p>
+    The ultimate target of an educational institution is to enhance the performance of every student
+    This can promptly be achieved by analyzing the performance of each student using competent
+    analytic tools such as a dashboard. The information thus obtained can be deployed for 
+    taking effective as well as corrective measures to help them in performing better and
+    realizing their potential.If not done systematically, this process may become time
+    consuming and tedious. Student Information System (SIS) assists the institutions to
+    manage every single detail about students in a holistic, organized and cost-effective way.
+    Education ERP completely and efficiently eliminates the need of faculty members to spend 
+    a considerable amount of time in compiling student data. Thereby assisting the faculty 
+    members in channelizing their concentration on the students and their performance enhancement
+        </p>
+    </div>
+</div>
+</body>
+</html>

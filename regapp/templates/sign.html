@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bi">
+	
+	<form action="{% url 'submit' %}" method="POST" class="cot">
+	{% csrf_token %}
+	<h3 class="r">Student Registration</h3>
+	<input type="text" placeholder="name" name="name" class="frm">
+	<input type="text" placeholder="student id" name="stdid" class="frm">
+	<input type="text" placeholder="year of joining" name="year" class="frm">
+	<input type="text" placeholder="address" name="address" class="frm">
+	<input type="text" placeholder="mobile number" name="mobile" class="frm">
+	<input type="text" placeholder="email" name="email" class="frm">
+	<input type="password" placeholder="password" name="password" class="frm">
+	<input type="text" placeholder="branch name" name="branch" class="frm">
+	<input type="submit" name="submit" class="but">
+	<input type="submit" value=" new user" name="submit" class="but">
+	</form>
+</body>
+</html>	

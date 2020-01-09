@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bi">
+	<form class="cott" action="{%url 'loginss' %}" method="POST">
+	{% csrf_token %}
+	<h3 class="r"> Login page</h3>
+	<input type="text" placeholder="name" name="name" class="frm">
+	<input type="password" placeholder="password" name="password" class="frm">
+	<input type="submit"  placeholder="submit" name="login" class="but">
+	<input type="submit" value=" new user" class="but">
+	</form>
+</body>
+</html>	
+	

@@ -1,0 +1,227 @@
+.navbar
+{
+	text-align:center;
+	width:100%;
+	height:70px;
+	background-color:rgba(119, 41, 41, 0.5);
+	
+}
+.navbar ul
+{
+	list-style-type:none;
+	display:inline-flex;
+	text-align:center;
+}
+.navbar ul li
+{
+	
+	width:120px;
+	margin:15px;
+	font-size:20px;
+	text-align: center;
+
+}
+.navbar ul li:hover
+{
+	background-color:red;
+	border-radius:20px;
+	transition:1s;
+	padding: 10px;
+	
+}
+.navbar ul li a
+{
+	text-decoration:none;
+	color:white;
+}
+*{margin:0px;padding:0px;}
+.bi
+{
+	background-image:url(../img/qal.jpg);
+	background-size:cover;
+}
+.cot
+{
+	background-color:rgba(0,0,0,0.5);
+	width:350px;
+	height:550px;
+	position:relative;
+	left:400px;
+	text-align:center;
+	padding:40px;
+	margin:10px;
+	
+}
+.frm
+{
+width:200px;
+margin:10px;
+padding:10px;
+background-color:rgba(0,0,0,0.8);
+color:white;
+outline:none;
+border:2px solid #5ba0a4;
+transition:0.5s;
+box-shadow:8px 8px 4px grey;
+}
+.frm:focus
+{
+	box-shadow:0px 0px 20px 6px #5ba0a4;
+}
+.but{
+	float:right;
+	padding:15px 50px;
+	background-color:rgba(0,0,0,0.8);
+	color:white;
+	border-radius:30px;
+	
+}
+.cont
+{
+	width:450px;
+	height:400px;
+	position:relative;
+	left:400px;
+	text-align:center;
+	padding:40px;
+	margin:10px;
+	background-color:rgba(0,0,0,0.8);
+}
+.r
+{
+	color: rgb(175, 6, 6);
+}
+.cott
+{
+	background-color:rgba(0,0,0,0.5);
+	width:350px;
+	height:200px;
+	position:relative;
+	left:900px;
+	top:50px;
+	text-align:center;
+	padding:40px;
+	margin:10px;
+	
+}
+.cottt
+{
+	background-color:rgba(21, 48, 206, 0.5);
+	width:650px;
+	height:200px;
+	position:relative;
+	left:300px;
+	top: 200px;
+	text-align:center;
+	padding:40px;
+	margin:10px;
+	
+}
+.navbarm
+{	
+	position: relative;
+	margin-top: 10px;
+	text-align:center;
+	width:200px;
+	height:900px;
+	background-color:rgba(119, 41, 41, 0.5);
+}
+.navbarm ul
+{
+	
+	list-style-type:none;
+	display:inline-block;
+	text-align:center;
+}
+.navbarm ul li
+{
+	
+	width:120px;
+	margin:15px;
+	font-size:22px;
+	text-align: center;
+
+}
+.navbarm ul li:hover
+{
+	background-color:red;
+	border-radius:10px;
+	transition:1s;
+}
+.navbarm ul li a
+{
+	text-decoration:none;
+	color:white;
+}
+.bii
+{
+	background-image:url(../img/qal2.jpg);
+	background-size:cover;
+}
+.submenu
+{
+	display:none;
+	z-index:1;
+}
+
+
+.navbarm ul li:hover .submenu 
+{
+	display:inline-flex;
+	margin: 5px;
+	position:absolute;
+}
+.navbarm ul li:hover .submenu ul 
+{
+	display:block;
+	position: relative;
+	margin-left:-5px;
+	margin-top:-20px ;
+}
+.tables
+{
+
+	position: relative;
+	left: 400px;
+	top:10px;
+}
+.hd
+{
+	text-align:left;
+	color: white;
+}
+.tables1
+{
+
+	position: relative;
+	top:-850px;
+	left:200px;
+}
+
+.tables2
+{
+
+	
+	top:-550px;
+	left:200px;
+}
+.frm1
+{
+width:200px;
+border-radius: 20px;
+margin: 50px;
+padding: 15px;
+background-color:rgba(66, 63, 63, 0.8);
+color:white;
+outline:none;
+transition:0.5s;
+}
+.but1
+{
+	float:right;
+	padding:15px 50px;
+	background-color:rgba(221, 101, 101, 0.8);
+	color:white;
+	border-radius:30px;
+	
+}

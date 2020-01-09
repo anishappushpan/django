@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+table,th,td{border:2px solid black;border-collapse:collapse;text-align:center;background-color:white}
+th,td{padding:5px 10px}
+</style>
+</head>
+<body class="bii">
+<div style="display:inline-flex">
+<div class="navbarm">
+    <ul>
+		<li><a href="{% url 'stdetails' %}">My profile</a></li>
+		<li><a href="{% url 'stuviewatt' %}">Attendance Sheet</a></li>
+		<li><a href="{% url 'leave' %}">Leave Application</a></li>
+    </ul>
+</div>
+<div class="tables">
+<h1 class="hd">MY Profile</h1>
+<table>
+    <thead>
+       <tr>
+        <th>NAME</th>
+        <th>Student id</th>
+        <th>Mark 1</th>
+        <th>Mark 2</th>
+        <th>Mark 3</th>
+        </tr></thead>
+    <tbody>
+	{% if authors%}
+	{% for i in authors%}
+<tr>
+    <td>{{ i.name}}</td>
+    <td>{{ i.stdid}}</td>
+    <td>{{ i.mark1}}</td>
+    <td>{{ i.mark2}}</td>
+    <td>{{ i.mark3}}</td>
+ </tr>
+ </tbody>
+ {%endfor %}
+ {%endif %}
+</table>
+</div>
+</div>
+</body>
+</html>	

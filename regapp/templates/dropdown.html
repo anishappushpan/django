@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>
+login page
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bii">
+<div class="navbarm">
+    <ul>
+        <li><a href="{% url 'faculty' %}">Add Faculty</a>
+			<div class="submenu">
+				<ul>
+					<li><a href="{% url 'sign' %}">Add student</a></li>
+				</ul>	
+			</div>
+		</li>
+		<li><a href="{% url 'spersonal'%}">Student details</a>
+			<div class="submenu">
+				<ul>
+					<li><a href="{% url 'spersonal'%}">Personal details</a></li>
+					<li><a href="{% url 'sattendance'%}"> Attendance</a></li>	
+				</ul>
+			</div>
+		</li>
+		<li><a href="{% url 'fdetails'%}">Faculty details</a>
+		<div class="submenu">
+				<ul>
+					<li><a href="{% url 'fdetails'%}">Personal details</a></li>
+					
+				</ul>
+			</div>
+		
+		</li>
+	    <li><a href="{% url 'viewattend'%}">Attendance Sheet</a></li>
+		<li><a href="{% url 'fleaveapro' %}">Leave management</a>
+
+			<div class="submenu">
+				<ul>
+					<li><a href="{% url 'fleaveapro' %}">Faculty</a></li>
+					<li><a href="{% url 'sleaveapro' %}">Student</a></li>
+					
+				</ul>	
+			</div>
+		</li>
+	<li>
+	<form action="{% url 'logout1'%}" method="POST">
+	{% csrf_token %}
+			<input type="submit" value="Logout" name="logout1" class="but1" > </form></li>
+    </ul>
+
+</div>
+</div>
+</body>
+</html>	
+	

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<title>
+Mark Sheet
+</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bi">
+	
+	<form class="cot" action="{% url 'markz' %}" method="POST">
+	{% csrf_token %}
+	<h3 class="r">Mark Sheet</h3>
+	<input type="text" placeholder="name" name="name" class="frm">
+	<input type="text" placeholder="student id" name="stdid" class="frm">
+	<input type="text" placeholder="Subject1 mark" name="mark1" class="frm">
+	<input type="text" placeholder="Subject2 mark" name="mark2" class="frm">
+	<input type="text" placeholder="Subject3 mark" name="mark3" class="frm">
+	<input type="submit" name="attendance" class="but">
+	</form>
+</body>
+</html>	
